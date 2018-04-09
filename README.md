@@ -9,5 +9,5 @@
 
 用户注册和登录接口
 
-![image](https://github.com/peng-python/dwt-blog/blob/master/image/register.png
+![image](https://github.com/peng-python/dwt-blog/blob/master/image/register.png,
         https://github.com/peng-python/dwt-blog/blob/master/image/login.png)
