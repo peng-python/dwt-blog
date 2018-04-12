@@ -6,7 +6,8 @@
 # # from django.conf import settings
 # from django.views.decorators.cache import cache_page
 # from django.http import HttpResponse
-from rest_framework import mixins,viewsets,filters
+from rest_framework import mixins,viewsets
+from rest_framework.pagination import PageNumberPagination
 
 
 from models import ArticleModel,RecommendModel,SentenceModel,LabelModel,NoticeModel,ColumnModel,CommentModel
@@ -14,9 +15,17 @@ from .serializers import ArticleSerializer,ColumnSerializer,LabelSerializer,Comm
 # Create your views here.
 
 
+class ArticlePagination(PageNumberPagination):
+    page_size = 1
+    page_size_query_param = 'page_size'
+    page_query_param = 'page'
+    max_page_size = 100
+
+
 class ArticleListViewSet(mixins.ListModelMixin,mixins.RetrieveModelMixin,viewsets.GenericViewSet):
     queryset = ArticleModel.objects.all()
     serializer_class = ArticleSerializer
+    pagination_class = ArticlePagination
 
 
 class ColumnListViewSet(mixins.ListModelMixin,mixins.RetrieveModelMixin,viewsets.GenericViewSet):
