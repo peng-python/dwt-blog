@@ -3,6 +3,10 @@
 
 ![image](https://github.com/peng-python/dwt-blog/blob/master/image/index.png)
 
+首页-分页功能
+
+![image](https://github.com/peng-python/dwt-blog/blob/master/image/page.png)
+
 评论接口
 
 ![image](https://github.com/peng-python/dwt-blog/blob/master/image/comment.png)
